@@ -52,36 +52,6 @@ bool EventTriggered(double interval)
     return false;
 }
 
-
-// class Ability
-// {
-// public:
-    
-    // virtual void ExecuteAbility();
-
-    // virtual void initAbility(std::weak_ptr<Player> player)
-    // {
-    //     mOwningPlayer = player;
-    // }
-
-// protected:
-
-//     std::weak_ptr<Player> mOwningPlayer = nullptr;
-// };
-
-// class SpeedUpAbility : public Ability
-// {
-//     public:
-
-//     virtual void ExecuteAbility() override
-//     {
-//         if(std::shared_ptr<Player> PlayerToControl = mOwningPlayer.lock())
-//         {
-//             PlayerToControl->
-//         }
-//     }
-// }
-
 class PowerUp;
 
 // List of different Power Ups
@@ -105,14 +75,6 @@ public:
     double invincibilityEnd = 0;
     PowerUpType powerType;
 
-    // std::vector<std::shared_ptr<Ability>> mAbilities;
-    // void AddAbility(std::shared_ptr<Ability> AbilityToAdd)
-    // {
-    //     mAbilities.emplace_back(AbilityToAdd);
-    //     AbilityToAdd->initAbility(this);
-    //     AbilityToAdd->ExecuteAbility();
-    // }
-
     //Added for player selections
     Color thisColor;
 
@@ -134,11 +96,6 @@ public:
             float y = body[i].y;
             //Reduced size
             Rectangle segment = {offset + x * cellSize, offset + y * cellSize, (float)cellSize/2, (float)cellSize/2};
-            /*if(direction == Vector2{1,0}){
-                segment = {offset + x * cellSize, offset + y * cellSize, (float)cellSize, (float)cellSize/2};
-            }else{
-                segment = {offset + x * cellSize, offset + y * cellSize, (float)cellSize/2, (float)cellSize};
-            } It will be cool if we can implement this*/
             DrawRectangleRounded(segment, 0.5, 6, thisColor);
         }
     }
@@ -416,10 +373,7 @@ public:
 
     void CheckCollisionWithTail()
     {
-        // if (IsInvincible() == false)
-        // {
-            
-        // }
+
         deque<Vector2> headlessBody1 = playerOne.body;
         deque<Vector2> headlessBody2 = playerTwo.body;
         headlessBody1.pop_front();
@@ -460,7 +414,6 @@ int main()
 
         // Sets the movemenet speed based if its speed boosted or not
         // the numbers are the interval, so the smaller the number, the faster the player moves
-        //double moveInterval = game.IsSpeedBoosted() ? 0.1 : 0.2;
 
         if (EventTriggered(0.1))
         {
