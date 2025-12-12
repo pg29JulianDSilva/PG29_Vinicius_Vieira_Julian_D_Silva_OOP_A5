@@ -87,7 +87,7 @@ class PowerUp;
 // List of different Power Ups
 enum PowerUpType
 {
-    SPEED_BOOST,
+    SCRAMBLED,
     INVINCIBILITY
 };
 
@@ -171,7 +171,7 @@ public:
     {
         double currentTime = GetTime();
 
-        if (type == SPEED_BOOST)
+        if (type == SCRAMBLED)
         {
             scrambledEnd = currentTime + 5.0;
         }
@@ -210,7 +210,7 @@ public:
         powerType = power;
         spawnCooldown = GetTime();
         std::string path = "Graphics/";
-        if (powerType == SPEED_BOOST)
+        if (powerType == SCRAMBLED)
         {
             path += "speed.png";
         }
