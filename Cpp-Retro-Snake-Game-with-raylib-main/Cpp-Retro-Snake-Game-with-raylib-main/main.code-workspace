@@ -11,6 +11,10 @@
 			"blocks.h": "c",
 			"stdio.h": "c",
 			"*.m": "c",
+			"Utils.h": "c",
+			"Player.h": "c",
+			"PowerUp.h": "c",
+			"Game.h": "c",
 			"limits": "cpp",
 			"array": "cpp",
 			"atomic": "cpp",
@@ -50,7 +54,10 @@
 			"stdexcept": "cpp",
 			"streambuf": "cpp",
 			"cinttypes": "cpp",
-			"typeinfo": "cpp"
+			"typeinfo": "cpp",
+			"Player" : "cpp",
+			"PowerUp" : "cpp",
+			"Game" : "cpp"
 		}
 	}
 }
