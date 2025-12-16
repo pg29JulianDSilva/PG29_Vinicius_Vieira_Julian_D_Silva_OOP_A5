@@ -2,12 +2,11 @@ TRON
 
 Made By Julian D. Silva and Vinicius Januzzi - VFS 2025/2026 - PG29 - OOP Term 2
 
-Intructions:
+Instructions:
 
 Download and unzip the file, then run it from Visual Studio Code. Make sure to have RayLib installed.
 
 Reference for Visual Studio Code and RayLib versions:
-
 https://www.youtube.com/watch?v=PaAcVk5jUd8&list=PLwR6ZGPvjVOSRywn9VCQ3yrRVruxzzuo9&index=4
 
 
